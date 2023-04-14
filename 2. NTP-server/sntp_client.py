@@ -2,7 +2,7 @@ from datetime import datetime, date
 from time import time
 import socket
 
-from ntp_packet import NTPPacket
+from resources.ntp_packet import NTPPacket
 
 FORMAT_DIFFERENCE = (date(1970, 1, 1)
                      - date(1900, 1, 1)).days * 24 * 3600

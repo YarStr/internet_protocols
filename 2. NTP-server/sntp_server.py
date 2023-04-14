@@ -3,10 +3,10 @@ import socket
 import time
 import configparser
 
-from ntp_packet import NTPPacket
+from resources.ntp_packet import NTPPacket
 
 config = configparser.ConfigParser()
-config.read('configuration.ini')
+config.read('resources/configuration.ini')
 
 DELAY = int(config['DEFAULT']['delay'])
 FORMAT_DIFFERENCE = (datetime.date(1970, 1, 1)
