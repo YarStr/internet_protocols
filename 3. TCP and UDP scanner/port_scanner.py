@@ -1,5 +1,6 @@
 import socket
 from argparse import ArgumentParser, Namespace
+from concurrent.futures import ThreadPoolExecutor
 
 MIN_PORT = 1
 MAX_PORT = 2 ** 16 - 1
@@ -62,5 +63,6 @@ def validate_arguments(arguments: Namespace) -> None:
 if __name__ == '__main__':
     args = get_argument_parser().parse_args()
     validate_arguments(args)
-    for port in range(args.start_port, args.end_port + 1):
-        scan_port(args.host, port)
+    with ThreadPoolExecutor(max_workers=200) as thread_pool:
+        for port in range(args.start_port, args.end_port + 1):
+            thread_pool.submit(scan_port, args.host, port)
