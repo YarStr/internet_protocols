@@ -25,6 +25,6 @@
 ```
 - Ответы будут из кэша:
 ```
-      nslookup -type=A vk.com 192.168.1.72
-      nslookup -type=NS vk.com 192.168.1.72
+      nslookup -type=A vk.com 192.168.1.68
+      nslookup -type=NS vk.com 192.168.1.68
 ```
