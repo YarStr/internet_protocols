@@ -1,0 +1,11 @@
+{
+  "user_name_from": "test_learning_mail@mail.ru",
+  "user_names_to": [
+    "test_learning_mail@mail.ru",
+    "staya_03@mail.ru"
+  ],
+  "subject": "Пример темы сообщения",
+  "attachments": "attachments",
+  "boundary": "bound2023.001",
+  "nickname": "Имя Фамилия"
+}
